@@ -2,7 +2,7 @@
   <div>
     <div class="w-full p-4 bg-black fixed z-20 flex items-center justify-between">
       <div class="flex justify-center">
-        <h1 class="text-3xl font-extrabold text-white uppercase italic">Dim<span class="text-red-600">Fitness</span></h1>
+        <h1 class="text-3xl font-extrabold text-center text-white uppercase italic">Dim<span class="text-red-600">Fitness</span></h1>
       </div>
       <button @click="toggleMenu" class="text-white md:hidden">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
