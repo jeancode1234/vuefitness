@@ -7,9 +7,11 @@ import RegisterComponent from '@/components/auth/RegisterComponent.vue'
 import NavBarComponent from '@/components/NavBarComponent.vue'
 import DashboardComponent from '@/views/admin/dashboardComponent.vue'
 import IndexComponent from '@/views/admin/indexComponent.vue'
-import CreateprogrammeComponent from '@/views/admin/programmes/createComponent.vue'
+// import CreateprogrammeComponent from '@/views/admin/programmes/createComponent.vue'
 import ContactView from '@/views/ContactView.vue'
 import AproposView from '@/views/AproposView.vue'
+import AllAbonnenemtComponent from '@/views/admin/abonnements/AllAbonnenemtComponent.vue'
+import AllAbonnement from '@/views/admin/abonnementsClients/AllAbonnement.vue'
 
 
 const routes = [
@@ -42,31 +44,31 @@ const routes = [
 },
 
 {
-  path: '/dashboardAdmin',
+  path: '/dashboard',
   component: DashboardComponent,
   
   children:[
     {
-      path: '/dashboardAdmin',
+      path: '/dashboard',
       components:{
         default:DashboardComponent,
         two:IndexComponent,
       }
     },
     {
-      path: '/AdminCreateProgramme',
+      path: '/abonnements',
       components:{
         default:DashboardComponent,
-        two:CreateprogrammeComponent,
+        two:AllAbonnenemtComponent,
       }
     },
-    // {
-    //   path: '/AdminRendezVous',
-    //   components:{
-    //     default:DashboardComponent,
-    //     two:AllAppointmentComponent,
-    //   }
-    // },
+    {
+      path: '/abonnementsClient',
+      components:{
+        default:DashboardComponent,
+        two:AllAbonnement,
+      }
+    },
     // {
     //   path: '/AdminCreatePays',
     //   components:{
