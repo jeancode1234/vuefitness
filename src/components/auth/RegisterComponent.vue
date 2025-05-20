@@ -2,8 +2,8 @@
   <div style="font-family: Arial, Helvetica, sans-serif;">
     <div class="w-full relative lg:h-screen flex  justify-center ">
       
-      <div class="w-full z-10 absolute flex  justify-end h-auto ">
-        <form @submit.prevent="handleSubmit" class=" h-full p-8 bg-white w-3/6">
+      <div class="w-full lg:z-10 absolute flex  justify-end h-auto ">
+        <form @submit.prevent="handleSubmit" class=" h-full p-8 bg-white lg:w-3/6">
           <div class="w-full">
             <h2 class="text-3xl text-gray-800 pb-8 text-center font-bold">Commencez dès maintenant</h2>
             <div v-if="errors.length" class="w-full space-y-2 flex flex-col py-2 justify-center">
@@ -19,7 +19,8 @@
                       <option value="" disabled>Sélectionnez votre statut</option>
                       <option value="diabétique">Diabétique</option>
                       <option value="hypertendu">Hypertendu(e)</option>
-                      <option value="normal">Aucun</option>
+                      <option value="hypertendu">Normal(e)</option>
+                      <option value="normal">Autre</option>
                 
                     </select>
                   </div>
@@ -117,7 +118,7 @@
        
       </div>
         
-      <div class="w-full relative h-full">
+      <div class="w-full hidden lg:flex relative h-full">
         <div class="w-full h-full absolute bg-black/80"></div>
         <img src="./../../assets/img/fit.jpg" class="w-full h-full object-cover object-center" alt="background" />
       </div>

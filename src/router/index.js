@@ -10,7 +10,18 @@ import IndexComponent from '@/views/admin/indexComponent.vue'
 import CreateprogrammeComponent from '@/views/admin/programmes/createComponent.vue'
 import ContactView from '@/views/ContactView.vue'
 import AproposView from '@/views/AproposView.vue'
-
+import HistoriqueView from '@/views/historiqueView.vue'
+import RepasComponent from '@/views/admin/repas/RepasComponent.vue'
+import TestimonialsComponent from '@/components/testimonialsComponent.vue'
+import QuestionsComponent from '@/components/questionsComponent.vue'
+import LoadingComponent from '@/components/LoadingComponent.vue'
+import CounterComponent from '@/components/CounterComponent.vue'
+import GalleryComponent from '@/components/GalleryComponent.vue'
+import ServiceView from '@/views/ServiceView.vue'
+import WindowsComponent from '@/components/WindowsComponent.vue'
+import AbonnementComponent from '@/components/AbonnementComponent.vue'
+import ScroollTopComponent from '@/components/ScroollTopComponent.vue'
+import LoadComponent from '@/components/LoadComponent.vue'
 
 const routes = [
   {
@@ -32,10 +43,24 @@ const routes = [
         }
       },
       {
+        path: '/services',
+        components:{
+          default:NavBarComponent,
+          one:ServiceView,
+        }
+      },
+      {
         path: '/apropos',
         components:{
           default:NavBarComponent,
           one:AproposView,
+        }
+      }, 
+      {
+        path: '/historique',
+        components:{
+          default:NavBarComponent,
+          one:HistoriqueView,
         }
       }, 
     ]
@@ -58,6 +83,13 @@ const routes = [
       components:{
         default:DashboardComponent,
         two:CreateprogrammeComponent,
+      }
+    },
+    {
+      path: '/AllRepas',
+      components:{
+        default:DashboardComponent,
+        two:RepasComponent,
       }
     },
     // {
@@ -114,7 +146,51 @@ const routes = [
     // },
   ]
 },
-
+{
+  path: '/question',
+  name: 'question',
+  component: QuestionsComponent
+},
+{
+  path: '/abonnement',
+  name: 'abonnement',
+  component: AbonnementComponent
+},
+{
+  path: '/windows',
+  name: 'windows',
+  component: WindowsComponent
+},
+{
+  path: '/testimonial',
+  name: 'testimonial',
+  component: TestimonialsComponent
+},
+{
+  path: '/loading',
+  name: 'Loading',
+  component: LoadingComponent
+},
+{
+  path: '/load',
+  name: 'Load',
+  component: LoadComponent
+},
+{
+  path: '/counter',
+  name: 'Counter',
+  component: CounterComponent,
+},
+{
+  path: '/gallery',
+  name: 'Gallery',
+  component: GalleryComponent,
+},
+{
+  path: '/scroll',
+  name: 'scroll',
+  component: ScroollTopComponent,
+},
   {
     path: '/slide',
     name: 'cardslide',

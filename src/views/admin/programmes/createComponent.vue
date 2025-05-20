@@ -73,13 +73,13 @@
       </div>
      <!-- Modal Apple Style -->
     <div v-if="showModal" class="fixed inset-0 flex items-center w-full justify-center bg-black bg-opacity-50">
-      <div class="bg-white rounded-2xl p-6 w-11/12 md:w-2/5 shadow-xl text-gray-800 relative">
+      <div class="bg-white rounded-2xl p-6 w-full  md:w-2/6 shadow-xl flex flex-col justify-center h-[160px] text-gray-800 relative">
         <h2 class="text-xl font-bold text-center mb-4">Programme Ajouté avec succès</h2>
            <div class="w-12 h-12 rounded-full border mx-auto border-green-600 flex items-center justify-center">
-               <div class="w-8 h-8 rounded-full bg-green-400"></div>
+               <div class="w-4 h-4 rounded-full bg-green-400"></div>
            </div>
         
-          <button @click="closeModal" class="w-4 h-4 bg-red-600 absolute top-4 right-4 rounded"></button>
+          <button @click="closeModal" class="w-4 h-4 text-red-600 absolute top-4 right-4 rounded">X</button>
         
       </div>
     </div>
